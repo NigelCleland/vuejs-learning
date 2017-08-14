@@ -1,0 +1,34 @@
+# The VueJS Application Object
+
+One of the simplest VueJS apps can be written as follows:
+
+### HTML
+
+```html
+
+<div id='app'>
+  <h2>{{ title }}</h2>
+</div
+
+```
+
+### JS
+
+new Vue({
+  el: '#app',
+  data: {
+    title: 'Hello World!'
+  }
+})
+
+## How this works
+
+The **Vue** object is looking for an ID named 'app'. If it was '.app' it would look for the first class of that name. 
+This *binds* the Vue object to the div and thus allows the Vue framework to manipulate the div.
+
+The moustaches (curly braces) have access to the namespaces of the Vue object directly without having to call any other primitives. 
+There are special reserved namespaces including:
+
+* data -> Stores data about the object in a 'key-value' style approach
+* methods -> Stores functions that can manipulate the data in the object 
+* computed -> Computed objects are similar to methods however they're more computationally efficient. Accessed in the same way as properties (data)
